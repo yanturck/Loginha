@@ -11,15 +11,19 @@ function minuscula(){
 }
 
 function mascaraCPF(){
-	var aux1 = document.getElementById("cpf").value;
+	var aux = document.getElementById("cpf").value;
 	document.getElementById("cpf").style.borderColor = "#ffffff";
 	document.getElementById("cpf").style.backgroundColor = "#ffffff";
-	if(aux1.length == 11){
-		var aux2 = aux1.split("");
-		var tmp = aux2[0] + aux2[1] + aux2[2] + "." + aux2[3] + aux2[4] + aux2[5] + "." + aux2[6] + aux2[7] + aux2[8] + "-" + aux2[9] + aux2[10];
-		document.getElementById("cpf").value = tmp;
-		document.getElementById("email").focus();
-	}else if(aux1.length == 14){
+	if(aux.length == 3){
+		aux += ".";
+		document.getElementById("cpf").value = aux;
+	}else if(aux.length == 7){
+		aux += ".";
+		document.getElementById("cpf").value = aux;
+	}else if(aux.length == 11){
+		aux += "-";
+		document.getElementById("cpf").value = aux;
+	}else if(aux.length == 14){
 		document.getElementById("email").focus();
 	}
 }
