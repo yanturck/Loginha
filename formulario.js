@@ -72,7 +72,6 @@ function validarCPF(){
 				alert("CPF invalido!");
 				return false;
 			}else{
-				document.getElementById("cpf").style.borderColor = "green";
 				return true;
 			}
 		}
@@ -82,6 +81,8 @@ function validarCPF(){
 
 function mascaraFone(){
 	var aux = document.getElementById("fone").value;
+	document.getElementById("fone").style.borderColor = "#ffffff";
+	document.getElementById("fone").style.backgroundColor = "#ffffff";
 	if(aux == ""){
 		aux += "(";
 		document.getElementById("fone").value = aux;
@@ -96,13 +97,56 @@ function mascaraFone(){
 	}
 }
 
+function verificFone(){
+	var aux = document.getElementById("fone").value;
+	if(aux == "" || aux.length != 15){
+		document.getElementById("fone").style.borderColor = "red";
+		document.getElementById("fone").style.backgroundColor = "#ffe5e5";
+	}
+	else if (aux == "(00) 00000-0000" ||
+		aux == "(11) 11111-1111" ||
+		aux == "(22) 22222-2222" ||
+		aux == "(33) 33333-3333" ||
+		aux == "(44) 44444-4444" ||
+		aux == "(55) 55555-5555" ||
+		aux == "(66) 66666-6666" ||
+		aux == "(77) 77777-7777" ||
+		aux == "(88) 88888-8888" ||
+		aux == "(99) 99999-9999"){
+			document.getElementById("fone").style.borderColor = "red";
+			document.getElementById("fone").style.backgroundColor = "#ffe5e5";
+			alert("Número de telefone invalido!");
+			return false;
+		}
+}
+
 function mascaraCEP(){
 	var aux = document.getElementById("cep").value;
+	document.getElementById("cep").style.borderColor = "#ffffff";
+	document.getElementById("cep").style.backgroundColor = "#ffffff";
 	if(aux.length == 5){
 		aux += "-";
 		document.getElementById("cep").value = aux;
 	}else if(aux.length == 9){
 		document.getElementById("endereco").focus();
+	}
+}
+
+function verificCEP(){
+	var aux = document.getElementById("cep").value;
+	if(aux == "" || aux.length != 9){
+		document.getElementById("cep").style.borderColor = "red";
+		document.getElementById("cep").style.backgroundColor = "#ffe5e5";
+		return false;
+	}
+	else if(aux == "65074-115" || aux == "65270-000" || aux == "65065-510" || aux == "65130-000"){
+		return true;
+	}
+	else {
+		document.getElementById("cep").style.borderColor = "red";
+		document.getElementById("cep").style.backgroundColor = "#ffe5e5";
+		alert("Infelizmente não atendemos nesse local!");
+		return false;
 	}
 }
 
