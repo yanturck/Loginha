@@ -13,7 +13,7 @@
 				<form class="form" name="form">
 					<input class="field" type="text" id="nomeC" onKeyUp="maiuscula()" placeholder="*Nome Completo"><br>
 					<input class="field" type="text" id="nomeS" placeholder="Nome Social/Apelido"><br>
-					<input class="field" type="text" id="cpf" onKeyPress="mascaraCPF()" placeholder="*CPF"><br>
+					<input class="field" type="text" id="cpf" onKeyPress="mascaraCPF()" onBlur="validarCPF()" placeholder="*CPF"><br>
 					<input class="field" type="text" id="email" onKeyUp="minuscula()" placeholder="Email"><br>
 					<input class="field" type="text" id="fone" onKeyPress="mascaraFone()" placeholder="*Telefone/WhatsApp"><br>
 					<label class="field" for="listaI">Lista de Itens</label><br>
