@@ -43,7 +43,6 @@ function validarCPF(){
 			tmp1[0] == "888.888.888" || tmp1[0] == "999.999.999"){
 				document.getElementById("cpf").style.borderColor = "red";
 				document.getElementById("cpf").style.backgroundColor = "#ffe5e5";
-				alert("CPF invalido!");
 				return false;	
 			}
 		var aux = tmp1[0].split(".");
@@ -59,7 +58,6 @@ function validarCPF(){
 		if(rev1 != parseInt(aux1.charAt(9))){
 			document.getElementById("cpf").style.borderColor = "red";
 			document.getElementById("cpf").style.backgroundColor = "#ffe5e5";
-			alert("CPF invalido!");
 			return false;
 		}else{
 			var add2 = 0;
@@ -73,7 +71,6 @@ function validarCPF(){
 			if(rev2 != parseInt(aux1.charAt(10))){
 				document.getElementById("cpf").style.borderColor = "red";
 				document.getElementById("cpf").style.backgroundColor = "#ffe5e5";
-				alert("CPF invalido!");
 				return false;
 			}else{
 				return true;
@@ -119,7 +116,6 @@ function verificFone(){
 		aux == "(99) 99999-9999"){
 			document.getElementById("fone").style.borderColor = "red";
 			document.getElementById("fone").style.backgroundColor = "#ffe5e5";
-			alert("Número de telefone invalido!");
 			return false;
 		}
 }
