@@ -1,7 +1,7 @@
-function maiuscula(){
-  var letra = document.getElementById("nomeC").value;
-  letra = letra.toUpperCase();
-  document.getElementById("nomeC").value = letra;
+function maiuscula(aux){
+  var tmp = document.getElementById(aux).value;
+  tmp = tmp.toUpperCase();
+  document.getElementById(aux).value = tmp;
 }
 
 function minuscula(){
@@ -10,7 +10,7 @@ function minuscula(){
   document.getElementById("email").value = letra;
 }
 
-function mascaraCPF(){
+function mascaraCPF(del){
 	var aux = document.getElementById("cpf").value;
 	document.getElementById("cpf").style.borderColor = "#ffffff";
 	document.getElementById("cpf").style.backgroundColor = "#ffffff";
@@ -158,7 +158,8 @@ function campVazio(){
 	if(document.getElementById("nomeC").value=="" | 		document.getElementById("cpf").value=="" ||
 		document.getElementById("fone").value=="" ||
 		document.getElementById("cep").value=="" ||
-		document.getElementById("endereco").value==""){
+		document.getElementById("endereco").value=="" ||
+		document.getElementById("num").value==""){
 			alert("Preencha todos os campos OBRIGATORIOS!");
 			return false;
 	}
