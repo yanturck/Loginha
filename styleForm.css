@@ -42,4 +42,6 @@ h6{
 }
 textarea{
 	height: 150px;
+	outline: none;
+	overflow: auto;
 }
