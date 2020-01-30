@@ -16,7 +16,7 @@
 					<input class="field" type="text" id="cpf" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 &&mascaraCPF()" onBlur="validarCPF()" placeholder="*CPF"><br>
 					<input class="field" type="email" id="email" onKeyUp="minuscula()" placeholder="Email"><br>
 					<input class="field" type="text" id="fone" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 && mascaraFone()" onBlur="verificFone()" placeholder="*Telefone/WhatsApp"><br>
-					<label class="field" for="listaI">Lista de Itens</label><br>
+					<textarea class="field" name="itens" placeholder="Nenhum item no carrinho!"></textarea><br>
 					<input class="field" type="text" id="cep" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 && mascaraCEP()" onBlur="verificCEP()" placeholder="*CEP: 65130-000, 65074-115, 65270-000"><br>
 					<input class="field" type="text" id="endereco" onKeyUp="maiuscula('endereco')" placeholder="*Endereço"><br>
 					<input class="field" type="text" id="num" onKeyPress="return event.charCode >= 48 && event.charCode <= 57" placeholder="*Número"><br>
@@ -26,7 +26,7 @@
 					Infelizmente, não atendemos para todas as regiões.<br>
 					No campo OBSERVAÇÕES relate somente o que achar nescessário.<br>
 					Para que a compra seja realizada com sucesso, preencha todos os itens obrigatórios de forma correta.</h6>
-					<button class="btn" type="button">Cancelar</button>
+					<button class="btn" type="button" onClick="cancelar()">Cancelar</button>
 					<button class="btn" type="button" onClick="salvar()">Enviar</button>
 				</form>
 			</div>
