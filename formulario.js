@@ -203,7 +203,7 @@ function salvar(){
 				document.getElementById("cpf").value + " | " +
 				document.getElementById("fone").value + "\n" +
 				document.getElementById("email").value + "\n" +
-				"LISTA DE ITEMS" + "\n" +
+				document.getElementById("itens") + "\n" +
 				document.getElementById("cep").value + " | " +
 				document.getElementById("num").value + " - "
 				document.getElementById("endereco").value + "\n" +
@@ -211,5 +211,13 @@ function salvar(){
 				document.getElementById("obs").value;
 		return pedido;
 	}
-	alert(pedido);
+}
+
+function cancelar(){
+	var conf = confirm("Você tem certeza que deseja cancelar?");
+	if (conf == true){
+	}
+	else{
+		return false;
+	}
 }
