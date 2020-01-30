@@ -13,8 +13,8 @@
 				<form class="form" name="form">
 					<input class="field" type="text" id="nomeC" onKeyUp="maiuscula('nomeC')" placeholder="*Nome Completo"><br>
 					<input class="field" type="text" id="nomeS" placeholder="Nome Social/Apelido"><br>
-					<input class="field" type="text" id="cpf" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 && mascaraCPF()" onBlur="validarCPF()" placeholder="*CPF"><br>
-					<input class="field" type="text" id="email" onKeyUp="minuscula()" placeholder="Email"><br>
+					<input class="field" type="text" id="cpf" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 &&mascaraCPF()" onBlur="validarCPF()" placeholder="*CPF"><br>
+					<input class="field" type="email" id="email" onKeyUp="minuscula()" placeholder="Email"><br>
 					<input class="field" type="text" id="fone" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 && mascaraFone()" onBlur="verificFone()" placeholder="*Telefone/WhatsApp"><br>
 					<label class="field" for="listaI">Lista de Itens</label><br>
 					<input class="field" type="text" id="cep" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 && mascaraCEP()" onBlur="verificCEP()" placeholder="*CEP: 65130-000, 65074-115, 65270-000"><br>
@@ -24,7 +24,7 @@
 					<textarea class="field" name="obs" placeholder="Observações"></textarea>
 					<h6>*Itens obrigatórios!</br>
 					Infelizmente, não atendemos para todas as regiões.<br>
-					No campo OBSERVAÇÕES relate somente o que acha nescessário.<br>
+					No campo OBSERVAÇÕES relate somente o que achar nescessário.<br>
 					Para que a compra seja realizada com sucesso, preencha todos os itens obrigatórios de forma correta.</h6>
 					<button class="btn" type="button">Cancelar</button>
 					<button class="btn" type="button" onClick="salvar()">Enviar</button>
