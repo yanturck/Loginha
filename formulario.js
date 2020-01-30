@@ -103,116 +103,6 @@ function verificFone(){
 	if(aux == "" || aux.length != 15){
 		document.getElementById("fone").style.borderColor = "red";
 		document.getElementById("fone").style.backgroundColor = "#ffe5e5";
-	}
-	else if (aux == "(00) 00000-0000" ||
-		aux == "(11) 11111-1111" ||
-		aux == "(22) 22222-2222" ||
-		aux == "(33) 33333-3333" ||
-function maiuscula(aux){
-  var tmp = document.getElementById(aux).value;
-  tmp = tmp.toUpperCase();
-  document.getElementById(aux).value = tmp;
-}
-
-function minuscula(){
-  var letra = document.getElementById("email").value;
-  letra = letra.toLowerCase();
-  document.getElementById("email").value = letra;
-}
-
-function mascaraCPF(del){
-	var aux = document.getElementById("cpf").value;
-	document.getElementById("cpf").style.borderColor = "#ffffff";
-	document.getElementById("cpf").style.backgroundColor = "#ffffff";
-	if(aux.length == 3){
-		aux += ".";
-		document.getElementById("cpf").value = aux;
-	}else if(aux.length == 7){
-		aux += ".";
-		document.getElementById("cpf").value = aux;
-	}else if(aux.length == 11){
-		aux += "-";
-		document.getElementById("cpf").value = aux;
-	}else if(aux.length == 14){
-		document.getElementById("email").focus();
-	}
-}
-
-function validarCPF(){
-	var tmp = document.getElementById("cpf").value;
-	if(tmp == "" || tmp.length != 14){
-		document.getElementById("cpf").style.borderColor = "red";
-		document.getElementById("cpf").style.backgroundColor = "#ffe5e5";
-		return false;
-	}else{
-		var tmp1 = tmp.split("-");
-		if(tmp1[0] == "000.000.000" || tmp1[0] == "111.111.111" ||
-			tmp1[0] == "222.222.222" || tmp1[0] == "333.333.333" ||
-			tmp1[0] == "444.444.444" || tmp1[0] == "555.555.555" ||
-			tmp1[0] == "666.666.666" || tmp1[0] == "777.777.777" ||
-			tmp1[0] == "888.888.888" || tmp1[0] == "999.999.999"){
-				document.getElementById("cpf").style.borderColor = "red";
-				document.getElementById("cpf").style.backgroundColor = "#ffe5e5";
-				return false;	
-			}
-		var aux = tmp1[0].split(".");
-		var aux1 = aux[0] + aux[1] + aux[2] + tmp1[1];
-		var add1 = 0;
-		for (i=0; i<9; i++){
-			add1 += (parseInt(aux1.charAt(i)) * (10-i));
-		}
-		var rev1 = 11 - (add1 % 11);
-		if(rev1 == 10 || rev1 == 11){
-			rev1 = 0;
-		}
-		if(rev1 != parseInt(aux1.charAt(9))){
-			document.getElementById("cpf").style.borderColor = "red";
-			document.getElementById("cpf").style.backgroundColor = "#ffe5e5";
-			return false;
-		}else{
-			var add2 = 0;
-			for (i=0; i<10; i++){
-				add2 += (parseInt(aux1.charAt(i)) * (11-i));
-			}
-			var rev2 = 11 - (add2 % 11);
-			if(rev2 == 10 || rev2 == 11){
-				rev2=0;
-			}
-			if(rev2 != parseInt(aux1.charAt(10))){
-				document.getElementById("cpf").style.borderColor = "red";
-				document.getElementById("cpf").style.backgroundColor = "#ffe5e5";
-				return false;
-			}else{
-				return true;
-			}
-		}
-	}
-}
-
-
-function mascaraFone(){
-	var aux = document.getElementById("fone").value;
-	document.getElementById("fone").style.borderColor = "#ffffff";
-	document.getElementById("fone").style.backgroundColor = "#ffffff";
-	if(aux == ""){
-		aux += "(";
-		document.getElementById("fone").value = aux;
-	}else if(aux.length == 3){
-		aux += ") ";
-		document.getElementById("fone").value = aux;
-	}else if(aux.length == 10){
-		aux += "-";
-		document.getElementById("fone").value = aux;
-	}else if(aux.length == 15){
-		document.getElementById("cep").focus();
-	}
-}
-
-function verificFone(){
-	var aux = document.getElementById("fone").value;
-	if(aux == "" || aux.length != 15){
-		document.getElementById("fone").style.borderColor = "red";
-		document.getElementById("fone").style.backgroundColor = "#ffe5e5";
 		return false;
 	}
 	else if (aux == "(00) 00000-0000" ||
@@ -277,7 +167,7 @@ function campVazio(){
 	}
 }
 
-function salvar(){
+function verificAll(){
 	if (campVazio() == true){
 		if (validarCPF() == true){
 			if(verificFone() == true){
@@ -303,4 +193,23 @@ function salvar(){
 		alert("Preencha todos os campos!");
 		return false;
 	}
+}
+
+function salvar(){
+	var pedido;
+	if(verificAll() == true){
+		pedido = document.getElementById("nomeC").value + " | " +
+				document.getElementById("nomeS").value + "\n" +
+				document.getElementById("cpf").value + " | " +
+				document.getElementById("fone").value + "\n" +
+				document.getElementById("email").value + "\n" +
+				"LISTA DE ITEMS" + "\n" +
+				document.getElementById("cep").value + " | " +
+				document.getElementById("num").value + " - "
+				document.getElementById("endereco").value + "\n" +
+				document.getElementById("complemento").value + "\n" +
+				document.getElementById("obs").value;
+		return pedido;
+	}
+	alert(pedido);
 }
