@@ -8,6 +8,18 @@ section{
 	background-color: #d3d3d3;
 }
 
+button{
+	font-family: Arial, helvetica, sans-aerif;
+	font-weight: bold;
+	font-size: 15px;
+	color: #DCDCDC;
+	background-color: #4F4F4F;
+	height:35px;	
+	display:block;
+	border-bottom-color: #DCDCDC;
+	float: right;
+}
+
 .coluna{
 	display: flex;
 	justify-content: center;
@@ -16,13 +28,13 @@ section{
 .logo{
 	display: table-cell;
 	float: left;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 
 .slide{
 	display: table-cell;
 	float: left;
-	width: 800px;
+	width: 700px;
 	margin-left: 20px;
 	text-align: justify;
 }
@@ -30,14 +42,17 @@ section{
 .left{
 	display: table-cell;
 	float: left;
+	width: 400px;
 }
 
 .center{
 	display: table-cell;
 	float: center;
+	width: 400px;
 }
 
 .right{
 	display: table-cell;
 	float: right;
+	width: 400px;
 }
