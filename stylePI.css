@@ -1,0 +1,43 @@
+header{
+	background-color: #009186;
+	color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+section{
+	background-color: #d3d3d3;
+}
+
+.coluna{
+	display: flex;
+	justify-content: center;
+}
+
+.logo{
+	display: table-cell;
+	float: left;
+	margin-top: 20px;
+}
+
+.slide{
+	display: table-cell;
+	float: left;
+	width: 800px;
+	margin-left: 20px;
+	text-align: justify;
+}
+
+.left{
+	display: table-cell;
+	float: left;
+}
+
+.center{
+	display: table-cell;
+	float: center;
+}
+
+.right{
+	display: table-cell;
+	float: right;
+}
