@@ -39,20 +39,9 @@ section{
 	text-align: justify;
 }
 
-.left{
+.topico{
 	display: table-cell;
 	float: left;
-	width: 400px;
-}
-
-.center{
-	display: table-cell;
-	float: center;
-	width: 400px;
-}
-
-.right{
-	display: table-cell;
-	float: right;
-	width: 400px;
+	width: 450px;
+	background-color: #c0c0c0;
 }
