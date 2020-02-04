@@ -19,10 +19,9 @@ select{
 	background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;
 	background-position: 270px center;
 	width: 300px;
-	height:30px;
+	height:35px;
 	border:1px solid #ddd;
 	margin-bottom: 5px;
-	margin-left: 6px;
 }
 a{
 	color: #dcdcdc;
@@ -73,7 +72,6 @@ h6{
 
 .topico{
 	flex: 0 0 31%;
-	width: 450px;
 	background-color: #c0c0c0;
 	margin-bottom: 10px;
 	margin-right: 10px;
