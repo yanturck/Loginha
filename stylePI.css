@@ -5,7 +5,7 @@ header{
 	background-color: #009186;
 	color: #fff;
 }
-section{
+main{
 	background-color: #d3d3d3;
 }
 footer{
@@ -31,7 +31,6 @@ h3{
 	font-family: Arial, helvetica, sans-aerif;
 	font-size: 13px;
 	color: #dcdcdc;
-	text-align: center;
 }
 h6{
 	font-family: Arial, helvetica, sans-aerif;
@@ -50,8 +49,9 @@ h6{
 	float: right;
 }
 
-.coluna{
+.grid{
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 
@@ -70,13 +70,12 @@ h6{
 }
 
 .topico{
-	display: table-cell;
-	float: left;
+	flex: 0 0 32%;
 	width: 450px;
 	background-color: #c0c0c0;
 }
 .link{
-	display: table-cell;
-	float: left;
-	width: 450px;
+	flex: 0 0 32%;
+	height: 40px;
+	text-align: center;
 }
