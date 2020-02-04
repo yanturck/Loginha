@@ -13,14 +13,16 @@ footer{
 	color: #f5f5f5;
 }
 select{
-	-webkit-appearance: none;  /* Remove estilo padrão do Chrome */
-   -moz-appearance: none; /* Remove estilo padrão do FireFox */
-   appearance: none; /* Remove estilo padrão do FireFox*/
-   background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;  /* Imagem de fundo (Seta) */
-   background-position: 218px center;  /*Posição da imagem do background*/
-   width: 250px; /* Tamanho do select, maior que o tamanho da div "div-select" */
-   height:30px; /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
-   border:1px solid #ddd;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;
+	background-position: 270px center;
+	width: 300px;
+	height:30px;
+	border:1px solid #ddd;
+	margin-bottom: 5px;
+	margin-left: 6px;
 }
 a{
 	color: #dcdcdc;
@@ -70,12 +72,15 @@ h6{
 }
 
 .topico{
-	flex: 0 0 32%;
+	flex: 0 0 31%;
 	width: 450px;
 	background-color: #c0c0c0;
+	margin-bottom: 10px;
+	margin-right: 10px;
 }
 .link{
-	flex: 0 0 32%;
+	flex: 0 0 30%;
 	height: 40px;
 	text-align: center;
+	margin-bottom: 5px;
 }
