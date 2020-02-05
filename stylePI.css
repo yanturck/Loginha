@@ -6,7 +6,7 @@ header{
 	color: #fff;
 }
 main{
-	background-color: #fff;
+	background-color: #d3d3d3;
 }
 footer{
 	background-color: #1f104f;
@@ -75,7 +75,7 @@ h6{
 
 .topico{
 	flex: 0 0 31%;
-	background-color: #c0c0c0;
+	background-color: #fff;
 	margin-bottom: 10px;
 	margin-right: 10px;
 }
