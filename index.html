@@ -17,7 +17,7 @@
 				</div>
 			</div>
 		</header>
-		<main>
+		<form method="post" action="formulario.php">
 			<br><div class="grid">
 				<div class="topico">
 					<img src="Imagens/48098005-13DC-4A81-98DE-5A2ABB0CFAEC.png" title="Cama" width="250px">
@@ -96,8 +96,29 @@
 					</select>
 				</div>
 			</div><br>
-			<button class="btn" type="button" onClick="location.href='formulario.html'">Finalizar</button><br><br><br>
-		</main>
+			<script>
+				function verifica(){
+					var cama = document.getElementById(tipoCama).value;
+					var fogao = document.getElementById(tipoFogao).value;
+					var mesa = document.getElementById(tipoMesa).value;
+					var tv = document.getElementById(polTV).value;
+					var gr = document.getElementById(GRPortas).value;
+					var maquina = document.getElementById(tipoMacLav).value;
+					var geladeira = document.getElementById(tipoGel).value;
+					var frizer = document.getElementById(tipoFri).value;
+					var armario = document.getElementById(tipoArm).value;
+					if(cama == "" && fogao == "" && mesa == "" && tv == "" && gr == "" &&
+						maquina == "" && geladeira == "" && frizer == "" && armario == ""){
+							alert("ERRO!\nNenhum item selecionado.");
+							return false;
+					}
+					else{
+						return true;
+					}
+				}
+			</script>
+			<button class="btn" type="button" onClick="verifica()">Finalizar</button><br><br><br>
+		</form>
 		<footer>
 			<div class="grid">
 				<div class="link">
