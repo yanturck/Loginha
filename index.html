@@ -3,13 +3,14 @@
 	<head>
 		<meta charset="utf-8">
 		<title>PaginaInicialLoja</title>
+		<script src="pi.js"></script>
 	</head>
 	<link rel="stylesheet" type="text/css" href="stylePI.css">
 	<body>
 		<header>
 			<div class="grid">
 				<div class="logo">
-					<img src="Imagens/F42C1437-F821-4712-94AC-799A84454426.png" title="Logo da Loja" height="150px" width="150px">
+					<img src="Imagens/F42C1437-F821-4712-94AC-799A84454426.png" title="Logo da Loja" height="150px" width="150px" onClick="location.href='index.html'">
 				</div>
 				<div class="slide">
 					<h2>Lojinha</h2>
@@ -22,8 +23,8 @@
 				<div class="topico">
 					<img src="Imagens/48098005-13DC-4A81-98DE-5A2ABB0CFAEC.png" title="Cama" width="250px">
 					<select id="tipoCama" size="2" multiple="multiple">
-						<option>Cama de solteiro</option>
-						<option>Cama de casal</option>
+						<option value="1">Cama de solteiro</option>
+						<option value="2">Cama de casal</option>
 					</select>
 				</div>
 				<div class="topico">
@@ -96,7 +97,9 @@
 					</select>
 				</div>
 			</div><br>
-			<button class="btn" type="button" onClick="">Finalizar</button><br><br><br>
+			<button class="btn" type="button" onClick="verificar()">Finalizar</button>
+			<button class="btn" type="button" onClick="location.href='index.html'">Limpar</button>
+			<br><br><br>
 		</main>
 		<footer>
 			<div class="grid">
