@@ -7,11 +7,20 @@
 	</head>
 	<link rel="stylesheet" type="text/css" href="styleForm.css">
 	<body>
-		<section class="content">
+		<header>
+			<div class="grid">
+				<div class="logo">
+					<img src="Imagens/F42C1437-F821-4712-94AC-799A84454426.png" title="Logo da Loja" height="150px" width="150px" onClick="location.href='index.html'">
+				</div>
+				<div class="slide">
+					<h1>FORMULÁRIO DE VENDA</h1>
+				</div>
+			</div>
+		</header>
+		<main class="content">
 			<div class="compra">
-				<h1>FORMULÁRIO DE VENDA</h1>
 				<form class="form" name="form">
-					<input class="field" type="text" id="nomeC" onKeyUp="maiuscula('nomeC')" placeholder="*Nome Completo"><br>
+					<br><input class="field" type="text" id="nomeC" onKeyUp="maiuscula('nomeC')" placeholder="*Nome Completo"><br>
 					<input class="field" type="text" id="nomeS" placeholder="Nome Social/Apelido"><br>
 					<input class="field" type="text" id="cpf" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 &&mascaraCPF()" onBlur="validarCPF()" placeholder="*CPF"><br>
 					<input class="field" type="email" id="email" onKeyUp="minuscula()" placeholder="Email"><br>
@@ -22,7 +31,7 @@
 					<input class="field" type="text" id="num" onKeyPress="return event.charCode >= 48 && event.charCode <= 57" placeholder="*Número"><br>
 					<input class="field" type="text" id="complemento" placeholder="Complemento"><br>
 					<textarea class="field" name="obs" placeholder="Observações"></textarea>
-					<h6>*Itens obrigatórios!</br>
+					<h6>*Itens obrigatórios!<br>
 					Infelizmente, não atendemos para todas as regiões.<br>
 					No campo OBSERVAÇÕES relate somente o que achar nescessário.<br>
 					Para que a compra seja realizada com sucesso, preencha todos os itens obrigatórios de forma correta.</h6>
@@ -30,6 +39,6 @@
 					<button class="btn" type="button" onClick="salvar()">Enviar</button>
 				</form>
 			</div>
-		</section>
+		</main>
 	</body>
 </html>
