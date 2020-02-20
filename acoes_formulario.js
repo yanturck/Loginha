@@ -216,6 +216,8 @@ function salvar(){
 function cancelar(){
 	var conf = confirm("Você tem certeza que deseja cancelar?");
 	if (conf == true){
+		window.location.href = "index.html";
+		return true;
 	}
 	else{
 		return false;
