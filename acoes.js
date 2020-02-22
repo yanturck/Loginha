@@ -223,3 +223,41 @@ function cancelar(){
 		return false;
 	}
 }
+function verificarPI(){
+	var comp = "Nenhum Item";
+	
+	var aux = document.getElementById("tipoCama");
+	var cama = aux.options[aux.selectedIndex].value;
+	
+	var aux2 = document.getElementById("tipoFogao");
+	var fogao = aux2.options[aux2.selectedIndex].value;
+	
+	var aux3 = document.getElementById("tipoMesa");
+	var mesa = aux3.options[aux3.selectedIndex].value;
+	
+	var aux4 = document.getElementById("polTV");
+	var tv = aux4.options[aux4.selectedIndex].value;
+	
+	var aux5 = document.getElementById("GRPortas");
+	var gr = aux5.options[aux5.selectedIndex].value;
+	
+	var aux6 = document.getElementById("tipoMacLav");
+	var maquina = aux6.options[aux6.selectedIndex].value;
+	
+	var aux7 = document.getElementById("tipoGel");
+	var geladeira = aux7.options[aux7.selectedIndex].value;
+	
+	var aux8 = document.getElementById("tipoFri");
+	var frizer = aux8.options[aux8.selectedIndex].value;
+	
+	var aux9 = document.getElementById("tipoArm");
+	var armario = aux9.options[aux9.selectedIndex].value;
+
+	if(cama != comp || fogao != comp || mesa != comp || tv != comp || gr != comp || maquina != comp || geladeira != comp || frizer != comp || armario != comp){
+		window.location.href = "formulario.html";
+		return true;
+	}else{
+		alert("ERRO!\nNenhum item selecionado.");
+		return false;
+	}
+}
