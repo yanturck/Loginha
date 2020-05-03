@@ -3,9 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>CadastrarCompra</title>
-		<script src="acoes.js"></script>
 	</head>
-	<link rel="stylesheet" type="text/css" href="styleForm.css">
+	<link rel="stylesheet" type="text/css" href="style/styleForm.css">
 	<body>
 		<header>
 			<div class="grid">
@@ -22,11 +21,11 @@
 				<form class="form" name="form">
 					<br><input class="field" type="text" id="nomeC" onKeyUp="maiuscula('nomeC')" placeholder="*Nome Completo"><br>
 					<input class="field" type="text" id="nomeS" placeholder="Nome Social/Apelido"><br>
-					<input class="field" type="text" id="cpf" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 &&mascaraCPF()" onBlur="validarCPF()" placeholder="*CPF"><br>
-					<input class="field" type="email" id="email" onKeyUp="minuscula()" placeholder="Email"><br>
-					<input class="field" type="text" id="fone" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 && mascaraFone()" onBlur="verificFone()" placeholder="*Telefone/WhatsApp"><br>
-					<textarea class="field" name="itens" placeholder="Nenhum item no carrinho!"></textarea><br>
-					<input class="field" type="text" id="cep" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 && mascaraCEP()" onBlur="verificCEP()" placeholder="*CEP: 65130-000, 65074-115, 65270-000"><br>
+					<input class="field" type="text" id="cpf" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 && mascaraCPF()" maxlength="14" onBlur="validarCPF()" placeholder="*CPF"><br>
+					<input class="field" type="email" id="email" onKeyUp="minuscula('email')" placeholder="Email"><br>
+					<input class="field" type="text" id="fone" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 && mascaraFone()" maxlength="15" onBlur="verificFone()" placeholder="*Telefone/WhatsApp"><br>
+					<textarea class="field" id="itens" name="itens" placeholder="Nenhum item no carrinho!" disabled></textarea><br>
+					<input class="field" type="text" id="cep" onKeyPress="return event.charCode >= 48 && event.charCode <= 57 && mascaraCEP()" maxlength="9" onBlur="verificCEP()" placeholder="*CEP: 65130-000, 65074-115, 65270-000"><br>
 					<input class="field" type="text" id="endereco" onKeyUp="maiuscula('endereco')" placeholder="*Endereço"><br>
 					<input class="field" type="text" id="num" onKeyPress="return event.charCode >= 48 && event.charCode <= 57" placeholder="*Número"><br>
 					<input class="field" type="text" id="complemento" placeholder="Complemento"><br>
@@ -36,9 +35,10 @@
 					No campo OBSERVAÇÕES relate somente o que achar nescessário.<br>
 					Para que a compra seja realizada com sucesso, preencha todos os itens obrigatórios de forma correta.</h6>
 					<button class="btn" type="button" onClick="cancelar()">Cancelar</button>
-					<button class="btn" type="button" onClick="salvar()">Enviar</button>
+					<button class="btn" type="submit" onClick="salvar()">Realizar Pedidio</button>
 				</form>
 			</div>
 		</main>
+		<script src="scripts/scriptForm.js"></script>
 	</body>
 </html>
