@@ -1,16 +1,21 @@
 body{
-	font-family: Arial, Helvetica, sans-serif;	
+	font-family: Arial, Helvetica, sans-serif
 }
 header{
 	background-color: #009186;
-	color: #fff;
+	color: #fff
 }
 main{
-	background-color: #d3d3d3;
+	background-color: #d3d3d3
 }
 footer{
 	background-color: #1f104f;
-	color: #f5f5f5;
+	color: #f5f5f5
+}
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto
 }
 select{
 	-webkit-appearance: none;
@@ -24,22 +29,22 @@ select{
 	margin-bottom: 5px;
 	display: flex;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto
 }
 a{
 	color: #dcdcdc;
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 18px
 }
 h3{
 	font-family: Arial, helvetica, sans-aerif;
 	font-size: 13px;
-	color: #dcdcdc;
+	color: #dcdcdc
 }
 h6{
 	font-family: Arial, helvetica, sans-aerif;
 	font-size: 16px;
-	color: #dcdcdc;
+	color: #dcdcdc
 }
 .btn{
 	font-family: Arial, helvetica, sans-aerif;
@@ -50,19 +55,19 @@ h6{
 	height:35px;	
 	display:block;
 	border-bottom-color: #DCDCDC;
-	float: right;
+	float: right
 }
 
 .grid{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: center
 }
 
 .logo{
 	display: table-cell;
 	float: left;
-	margin-top: 30px;
+	margin-top: 30px
 }
 
 .slide{
@@ -70,18 +75,18 @@ h6{
 	float: left;
 	width: 700px;
 	margin-left: 20px;
-	text-align: justify;
+	text-align: justify
 }
 
 .topico{
 	flex: 0 0 31%;
 	background-color: #fff;
 	margin-bottom: 10px;
-	margin-right: 10px;
+	margin-right: 10px
 }
 .link{
 	flex: 0 0 30%;
 	height: 40px;
 	text-align: center;
-	margin-bottom: 5px;
+	margin-bottom: 5px
 }
