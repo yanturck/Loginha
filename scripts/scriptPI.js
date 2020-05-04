@@ -75,14 +75,13 @@ function verificarPI(){
 	
 	itens.sort();
 	
-	var indice1 = itens.indexOf(000);
-	var indice = itens.lastIndexOf(000);
+	var indice1 = itens.indexOf('000');
+	var indice = itens.lastIndexOf('000');
 	
 	itens.splice(indice1, indice+1);
 	
 	if(itens.length !== 0){
 		window.location.href = 'formulario.html?' + itens.join('&&');
-//		document.getElementById("itens").value = itens.join("\n");
 		return true;
 	}else{
 		alert("ERRO!\nNenhum item selecionado.");
